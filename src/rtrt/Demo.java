@@ -37,7 +37,8 @@ public class Demo {
 
 //        Stream<Integer> s=value.stream();
 //        Stream<Integer> s1=s.map((integer) ->integer*2);
-        Integer result= value.stream().map((integer) ->integer*2).reduce(0,(integer,integer2)->integer+integer2);
-        System.out.println(result);
+//        Integer result= value.stream().map((integer) ->integer*2).reduce(0,(integer,integer2)->integer+integer2);
+        System.out.println(value.stream().map((integer) ->integer*2).reduce(0,(integer,integer2)->integer+integer2));
+        System.out.println(value.stream().map((i) ->i*2).reduce(0,(c,e)->Integer.sum(c,e)));
     }
 }
