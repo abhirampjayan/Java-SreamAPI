@@ -35,9 +35,9 @@ public class Demo {
         System.out.println(result);*/
 
 
-        Stream<Integer> s=value.stream();
+//        Stream<Integer> s=value.stream();
 //        Stream<Integer> s1=s.map((integer) ->integer*2);
-        Integer result=(Integer) s.map((integer) ->integer*2).reduce(0,(integer,integer2)->integer+integer2);
+        Integer result= value.stream().map((integer) ->integer*2).reduce(0,(integer,integer2)->integer+integer2);
         System.out.println(result);
     }
 }
