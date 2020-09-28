@@ -40,5 +40,6 @@ public class Demo {
 //        Integer result= value.stream().map((integer) ->integer*2).reduce(0,(integer,integer2)->integer+integer2);
         System.out.println(value.stream().map((integer) ->integer*2).reduce(0,(integer,integer2)->integer+integer2));
         System.out.println(value.stream().map((i) ->i*2).reduce(0,(c,e)->Integer.sum(c,e)));
+        System.out.println(value.stream().map((i) ->i*2).reduce(0, Integer::sum));
     }
 }
