@@ -42,8 +42,7 @@ public class Demo {
         System.out.println(value.stream().map((i) ->i*2).reduce(0,(c,e)->Integer.sum(c,e)));
         System.out.println(value.stream().map((i) ->i*2).reduce(0, Integer::sum));
         System.out.println(value.stream().filter(i->i%5==0).reduce(0,Integer::sum));
-        System.out.println(value.stream().filter(i->i%5==0)
-                .map(i->i*2).findFirst().orElse(0));
+        System.out.println(value.stream().filter(i->i%5==0).map(i->i*2).findFirst().orElse(0));
 
     }
 }
