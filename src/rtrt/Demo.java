@@ -15,9 +15,9 @@ public class Demo {
             result=result+i*2;
         }*/
 
-        System.out.println(value.stream().map(i->i*2).reduce(0,(c,e)->c+e));
+//        System.out.println(value.stream().map(i->i*2).reduce(0,(c,e)->c+e));
 
-        Function<Integer,Integer> f=new Function<Integer, Integer>() {
+        /*Function<Integer,Integer> f=new Function<Integer, Integer>() {
             @Override
             public Integer apply(Integer integer) {
                 return integer*2;
@@ -32,6 +32,12 @@ public class Demo {
         Stream s=value.stream();
         Stream s1=s.map(f);
         Integer result=(Integer) s1.reduce(0,b);
+        System.out.println(result);*/
+
+
+        Stream<Integer> s=value.stream();
+//        Stream<Integer> s1=s.map((integer) ->integer*2);
+        Integer result=(Integer) s.map((integer) ->integer*2).reduce(0,(integer,integer2)->integer+integer2);
         System.out.println(result);
     }
 }
